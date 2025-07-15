@@ -1,6 +1,6 @@
 const form = document.getElementById('giftForm');
 
-form.addEventListener('submit', function(e) {
+form.addEventListener('submit', function (e) {
     e.preventDefault();
     const gameName = document.getElementById('gameName').value.trim();
     const comment = document.getElementById('comment').value.trim();

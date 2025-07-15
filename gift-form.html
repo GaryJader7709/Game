@@ -1,16 +1,47 @@
 <!DOCTYPE html>
 <html lang="zh-tw">
+
 <head>
     <meta charset="UTF-8">
     <title>撰寫評論</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+    <!-- 新增登入狀態顯示區 -->
+    <div id="userStatus"></div>
     <nav>
         <a href="index.html">首頁</a>
         <a href="gift-form.html">撰寫評論</a>
         <a href="record.html">查看紀錄</a>
     </nav>
+    <!-- 新增登入與註冊按鈕 -->
+    <button id="loginBtn">登入</button>
+    <button id="registerBtn">註冊</button>
+    <!-- 登入對話框 -->
+    <div id="loginModal" class="modal" style="display:none;">
+        <div class="modal-content">
+            <span class="close" id="closeLogin">&times;</span>
+            <h2>登入</h2>
+            <form id="loginForm">
+                <label>帳號：<input type="text" id="loginUser" required></label><br>
+                <label>密碼：<input type="password" id="loginPass" required></label><br>
+                <button type="submit">登入</button>
+            </form>
+        </div>
+    </div>
+    <!-- 註冊對話框 -->
+    <div id="registerModal" class="modal" style="display:none;">
+        <div class="modal-content">
+            <span class="close" id="closeRegister">&times;</span>
+            <h2>註冊</h2>
+            <form id="registerForm">
+                <label>帳號：<input type="text" id="registerUser" required></label><br>
+                <label>密碼：<input type="password" id="registerPass" required></label><br>
+                <button type="submit">註冊</button>
+            </form>
+        </div>
+    </div>
     <h1>撰寫評論</h1>
     <form id="giftForm">
         <label>遊戲名稱：<input type="text" id="gameName" required></label><br>
@@ -19,4 +50,5 @@
     </form>
     <script src="gift-form.js"></script>
 </body>
+
 </html>
